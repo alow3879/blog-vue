@@ -1,0 +1,38 @@
+{
+  "album1" : {
+    "name": "Some Name",
+    "data": "March 20th, 2020",
+    "background" : "/images/photos/gallery/1.jpg",
+    "photos": [
+      "/images/photos/gallery/1.jpg",
+      "/images/photos/gallery/2.jpg",
+      "/images/photos/gallery/3.jpg",
+      "/images/photos/gallery/4.jpg",
+      "/images/photos/gallery/5.jpg"
+    ]
+  },
+  "album2" : {
+    "name": "Some Name",
+    "data": "October 14th, 2020",
+    "background" : "/images/photos/gallery/2.jpg",
+    "photos": [
+      "/images/photos/gallery/5.jpg",
+      "/images/photos/gallery/6.jpg",
+      "/images/photos/gallery/7.jpg",
+      "/images/photos/gallery/8.jpg",
+      "/images/photos/gallery/9.jpg"
+    ]
+  },
+  "album3" : {
+    "name": "Some Name",
+    "data": "September 10th, 2020",
+    "background" : "/images/photos/gallery/3.jpg",
+    "photos": [
+      "/images/photos/gallery/9.jpg",
+      "/images/photos/gallery/10.jpg",
+      "/images/photos/gallery/11.jpg",
+      "/images/photos/gallery/12.jpg",
+      "/images/photos/gallery/1.jpg"
+    ]
+  }
+}

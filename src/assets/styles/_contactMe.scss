@@ -1,0 +1,59 @@
+.contact-me {
+  height: 95vh;
+  display: flex;
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    letter-spacing: 0.05em;
+  }
+  .title {
+    width: 385px;
+    letter-spacing: 4px;
+  }
+}
+.list-info {
+  width: 385px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-info-item {
+  color: #a0a09f;
+  font-size: 13px;
+  margin: 3px 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+input, textarea {
+  width: 385px;
+  border: 1px solid #A0A09F;
+  padding: 5px;
+  margin-bottom: 5px;
+  font: inherit;
+  font-size: 13px;
+}
+textarea {
+  resize: none;
+  height: 130px;
+}
+
+.submit-btn {
+  width: 100px;
+  padding: 5px;
+  align-self: flex-end;
+  font: inherit;
+  font-size: 16px;
+  background: #2f2e2e;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
