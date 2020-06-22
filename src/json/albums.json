@@ -1,6 +1,6 @@
 {
   "album1" : {
-    "name": "Some Name",
+    "name": "First",
     "data": "March 20th, 2020",
     "background" : "/images/photos/gallery/1.jpg",
     "photos": [
@@ -12,7 +12,7 @@
     ]
   },
   "album2" : {
-    "name": "Some Name",
+    "name": "Second",
     "data": "October 14th, 2020",
     "background" : "/images/photos/gallery/2.jpg",
     "photos": [
@@ -24,7 +24,7 @@
     ]
   },
   "album3" : {
-    "name": "Some Name",
+    "name": "Third",
     "data": "September 10th, 2020",
     "background" : "/images/photos/gallery/3.jpg",
     "photos": [

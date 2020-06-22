@@ -4,7 +4,10 @@
   position: relative;
   display: flex;
   background: #fff;
-  transform-style: inherit;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    min-height: 100vh;
+  }
 }
 
 .photo {
@@ -19,11 +22,19 @@
     width: auto;
     height: 100%;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    min-height: 40vh;
+  }
 }
 
 .text {
   width: 50%;
   padding: 5%;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .title {
@@ -42,6 +53,11 @@
     display: block;
     background: #000;
     bottom: -30px;
+  }
+  @media (max-width:768px) {
+    max-width: 90%;
+    font-size: 25px;
+
   }
 }
 

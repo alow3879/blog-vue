@@ -16,6 +16,9 @@
   opacity: 0;
   transition: 1s;
   margin: 0 0 10vh 17vw;
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 }
 .empty-title__active {
   opacity: 1;

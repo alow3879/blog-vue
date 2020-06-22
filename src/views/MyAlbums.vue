@@ -3,7 +3,7 @@
     <h2 class="title">Мои альбомы</h2>
     <p class="p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, possimus.</p>
     <div class="container">
-      <div class="album-wrapper" album-name="1" @click="album1">
+      <div class="album-wrapper" @click="album1">
         <div class="album">
           <div class="album-img-wrapper">
             <img src="/images/photos/gallery/1.jpg" @mouseenter="hoverImg" alt="">
@@ -22,8 +22,8 @@
           </div>
           <div class="preview-img-wrapper"><img class="preview-img" src="/images/photos/gallery/1.jpg" alt=""></div>
         </div>
-        <p class="album-name">Album Name</p>
-        <p class="album-data">October 14th, 2020</p>
+        <p class="album-name">{{ albums.album1.name }}</p>
+        <p class="album-data">{{ albums.album1.data }}</p>
       </div>
       <div class="album-wrapper" @click="album2">
         <div class="album">
@@ -44,8 +44,8 @@
           </div>
           <div class="preview-img-wrapper"><img class="preview-img" src="/images/photos/gallery/1.jpg" alt=""></div>
         </div>
-        <p class="album-name">Album Name</p>
-        <p class="album-data">October 14th, 2020</p>
+        <p class="album-name">{{ albums.album2.name }}</p>
+        <p class="album-data">{{ albums.album2.data }}</p>
       </div>
       <div class="album-wrapper" @click="album3">
         <div class="album">
@@ -66,8 +66,8 @@
           </div>
           <div class="preview-img-wrapper"><img class="preview-img" src="/images/photos/gallery/1.jpg" alt=""></div>
         </div>
-        <p class="album-name">Album Name</p>
-        <p class="album-data">October 14th, 2020</p>
+        <p class="album-name">{{ albums.album3.name }}</p>
+        <p class="album-data">{{ albums.album3.data }}</p>
       </div>
     </div>
     <div class="dark" :class="{flex : modal}">
@@ -89,13 +89,14 @@
 </template>
 
 <script>
-import albums from '@/json/albums.json'
+import json from '@/json/albums.json'
 
 export default {
   name: 'MyAlbums',
   data: function () {
     return {
       modal: false,
+      albums: json,
       albumActive: ''
     }
   },
@@ -105,9 +106,10 @@ export default {
     },
     showAlbom () {
       this.modal = !this.modal
-      document.querySelector('.modal').style.background = `url(${albums[this.albumActive].background})`
-      document.querySelector('.modal-album-name').innerHTML = albums[this.albumActive].name
-      document.querySelector('.modal-album-data').innerHTML = albums[this.albumActive].data
+      document.querySelector('.modal').style.background = `url(${this.albums[this.albumActive].background})`
+      document.querySelector('.modal-album-name').innerHTML = this.albums[this.albumActive].name
+      document.querySelector('.modal-album-data').innerHTML = this.albums[this.albumActive].data
+      console.dir(document.querySelector('.album-name'))
     },
     album1 () {
       this.albumActive = 'album1'
@@ -123,15 +125,15 @@ export default {
     },
     showPhotos () {
       const photos = document.querySelector('.modal-album-photos')
-      for (const item of albums[this.albumActive].photos) {
+      for (const item of this.albums[this.albumActive].photos) {
         photos.innerHTML += `<img src="${item}" alt="">`
       }
       photos.style.display = 'block'
     },
     closeModal () {
       this.modal = !this.modal
-      document.querySelector('.modal-album-photos').style.display = 'none'
       document.querySelector('.modal-album-photos').innerHTML = ''
+      document.querySelector('.modal-album-photos').style.display = 'none'
     }
   }
 }

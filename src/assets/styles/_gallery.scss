@@ -3,11 +3,14 @@
   height: 100vh;
   overflow: hidden;
   background: transparent;
+  @media (max-width: 768px) {
+    height: auto;
+  }
 }
 
 .gallery-img-wrapper {
-  width: 25%;
-  height: 33.333333%;
+  width: 50%;
+  height: 20vh;
   overflow: hidden;
   float: left;
   display: flex;

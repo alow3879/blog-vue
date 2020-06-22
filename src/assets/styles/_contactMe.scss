@@ -6,16 +6,26 @@
     flex-direction: column;
     align-items: flex-end;
     letter-spacing: 0.05em;
+    @media (max-width: 768px) {
+      align-items: center;
+    }
   }
   .title {
     width: 385px;
     letter-spacing: 4px;
+  }
+  @media (max-width: 768px) {
+    height: auto;
+    flex-direction: column;
   }
 }
 .list-info {
   width: 385px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    width: 300px;
+  }
 }
 
 .list-info-item {
@@ -27,6 +37,9 @@ form {
   display: flex;
   flex-direction: column;
   margin-top: 100px;
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
 }
 .form-inputs {
   display: flex;
@@ -39,6 +52,9 @@ input, textarea {
   margin-bottom: 5px;
   font: inherit;
   font-size: 13px;
+  @media (max-width: 768px) {
+    width: 300px;
+  }
 }
 textarea {
   resize: none;
