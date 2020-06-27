@@ -9,8 +9,8 @@
 }
 
 .gallery-img-wrapper {
-  width: 50%;
-  height: 20vh;
+  width: 25%;
+  height: 33.333vh;
   overflow: hidden;
   float: left;
   display: flex;
@@ -24,6 +24,10 @@
     img {
       transform: scale(1.15);
     }
+  }
+  @media (max-width: 768px) {
+    width: 50%;
+    height: 20vh;
   }
 }
 
